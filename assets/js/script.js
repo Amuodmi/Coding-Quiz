@@ -32,19 +32,19 @@ function stopTimer(){
 //Start game function
 var startGame = function() {
     console.log("button clicked")
-var question1 = document.querySelector("li.question1");
+var question1 = document.querySelector("p.question1");
 console.log("question1", question1)
-question1.textContent = "Commonly used data types do NOT include? ";
+question1.textContent = "1. Commonly used data types do NOT include? ";
 
 var answer1El = document.createElement("p");
 var answer2El = document.createElement("p");
 var answer3El = document.createElement("p");
 var answer4El = document.createElement("p");
 
-answer1El.textContent = "Strings"
-answer2El.textContent = "Booleans"
-answer3El.textContent = "Alerts"
-answer4El.textContent = "Number"
+answer1El.textContent = "A) Strings"
+answer2El.textContent = "B) Booleans"
+answer3El.textContent = "C) Alerts"
+answer4El.textContent = "D) Number"
 
 answer1El.onclick = checkAnswer
 answer2El.onclick = checkAnswer
@@ -60,19 +60,19 @@ startTimer();
 
 //Second question function
 function nextQuestion(){
-    var question2 = document.querySelector("li.question2");
+    var question2 = document.querySelector("p.question2");
 console.log("question2", question2)
-question2.textContent = "Arrays in JavaScript can be used to store ____? ";
+question2.textContent = "2. Arrays in JavaScript can be used to store ____? ";
 
 var answer1El = document.createElement("p");
 var answer2El = document.createElement("p");
 var answer3El = document.createElement("p");
 var answer4El = document.createElement("p");
 
-answer1El.textContent = "Numbers and Strings"
-answer2El.textContent = "Other Arrays"
-answer3El.textContent = "Booleans"
-answer4El.textContent = "All of the above"
+answer1El.textContent = "A) Numbers and Strings"
+answer2El.textContent = "B) Other Arrays"
+answer3El.textContent = "C) Booleans"
+answer4El.textContent = "D) All of the above"
 
 answer1El.onclick = checkAnswer2
 answer2El.onclick = checkAnswer2

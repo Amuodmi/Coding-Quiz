@@ -91,6 +91,7 @@ console.log(clickedAnswer);
 if ("Alerts" === clickedAnswer){
     console.log("right answer");
    counter = counter + 5;
+   clickedAnswer.onclick = "Correct!"
 }
 else {
     console.log("wrong");

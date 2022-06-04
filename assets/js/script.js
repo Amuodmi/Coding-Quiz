@@ -16,6 +16,7 @@ intervalId = setInterval(function (){
     counter--;
     countEl.textContent = counter;
     if (counter === 0){
+        inputDisplayEl.textContent = "Game over!"
         stopTimer();
         endGame();
     }
@@ -29,11 +30,14 @@ function stopTimer(){
  
 }
 
+
+var answerDisplay = document.getElementById("answer-display");
+
 //Start game function
 var startGame = function() {
-    console.log("button clicked")
+    
 var question1 = document.querySelector("p.question1");
-console.log("question1", question1)
+
 question1.textContent = "1. Commonly used data types do NOT include? ";
 
 var answer1El = document.createElement("p");
@@ -61,7 +65,7 @@ startTimer();
 //Second question function
 function nextQuestion(){
     var question2 = document.querySelector("p.question2");
-console.log("question2", question2)
+
 question2.textContent = "2. Arrays in JavaScript can be used to store ____? ";
 
 var answer1El = document.createElement("p");
@@ -82,20 +86,26 @@ answer4El.onclick = checkAnswer2
 question2.append(answer1El, answer2El, answer3El, answer4El);
 }
 
+
 //Checking if first answer is right
 function checkAnswer(event){
 
 var clickedAnswer = event.target.innerText
-console.log(clickedAnswer);
 
-if ("Alerts" === clickedAnswer){
+
+if ("C) Alerts" === clickedAnswer){
+
+    answerDisplay.textContent = "Correct! 5 seconds added to the clock.";
     console.log("right answer");
-   counter = counter + 5;
-   clickedAnswer.onclick = "Correct!"
+    counter = counter + 5;
+   
 }
 else {
+    answerDisplay.textContent = "Wrong choice! 5 seconds deducted from the clock."; 
     console.log("wrong");
     counter = counter - 5;
+   
+    
 }
 
 nextQuestion();
@@ -107,14 +117,16 @@ function checkAnswer2(event){
     var clickedAnswer = event.target.innerText
     console.log(clickedAnswer);
     
-    if ("All of the above" === clickedAnswer){
+    if ("D) All of the above" === clickedAnswer){
+        answerDisplay.textContent= "Correct! Game over. Enter your name, and see your score!";
         console.log("right answer");
-        counter = counter + 5;
+        //counter = counter + 5;
 
     endGame();
 
     }
     else {
+        answerDisplay.textContent = "Wrong choice! 5 seconds deducted from the clock.";
         console.log("wrong");
         counter = counter - 5;
 
@@ -124,16 +136,14 @@ function checkAnswer2(event){
     }
 
     //Inputting initials for score 
-    var inputEl = document.createElement("input");
-    inputEl.setAttribute("type", "text");
-
-    var saveEl = document.createElement("button");
+    var inputEl = document.getElementById("input-save");
+    var inputDisplayEl = document.getElementById("input-display")
+    var saveEl = document.getElementById("save-button");
     saveEl.onclick = saveScore 
+
 
     function endGame(){
    
-    saveEl.textContent = "Save";
-    document.body.append(inputEl, saveEl);
     stopTimer();
 
 }
@@ -142,9 +152,11 @@ function checkAnswer2(event){
 //Saving score funtion
 function saveScore (){
 var scoreEntryEl = document.createElement("p");
-scoreEntryEl.textContent = inputEl.value + " " + "score " + counter + "!"
+scoreEntryEl.textContent = inputEl.value + " " + "scored " + counter + " points!"
 
-document.body.append(scoreEntryEl);
+inputDisplayEl.append(scoreEntryEl)
+
+//document.body.append(scoreEntryEl);
 
 console.log("input", scoreEntryEl.textContent);
 }

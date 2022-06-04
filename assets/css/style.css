@@ -1,0 +1,63 @@
+:root {
+	--primary: rgb(147, 242, 245);
+	--secondary: rgb(215, 236, 236);
+	--tertiary: rgb(21, 21, 19);
+	--quarternary: rgb(94, 244, 219);
+}
+
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	display: block;
+	background-color: var(--primary);
+}
+
+.welcome h1 {
+	text-align: center;
+	font-weight: bolder;
+}
+
+.welcome p {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.gif {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.button {
+	margin-left: 580px;
+	margin-top: 50px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+#timer {
+	text-align: center;
+	margin-top: 20px;
+	font-size: larger;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.list-wrapper {
+	/*margin-left: 450px;*/
+	margin-top: 20px;
+	font-size: larger;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--secondary);
+}
+
+input {
+	margin: 10px;
+	font-family: cursive;
+	font-weight: 600;
+}
+
+p {
+	margin: 10px;
+}

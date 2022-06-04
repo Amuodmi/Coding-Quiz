@@ -126,7 +126,7 @@ function checkAnswer2(event){
 
     }
     else {
-        answerDisplay.textContent = "Wrong choice! 5 seconds deducted from the clock.";
+        answerDisplay.textContent = "Wrong choice! Game over. 5 points deducted from your final score. Enter your name, and see your score!";
         console.log("wrong");
         counter = counter - 5;
 

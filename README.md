@@ -7,7 +7,7 @@ to test their knowledge of this extremely fickle language.
 
 Below is a screenshot of the current state, and a link to the deployed webpage: 
 
-![Coding Quiz Screenshot](/Amuodmi/Coding-Quiz/blob/main/assets/Screen%20Shot%202022-06-04%20at%2015.58.24.png "Coding Quiz")
+![Coding Quiz Screenshot](https://github.com/Amuodmi/Coding-Quiz/blob/main/assets/Screen%20Shot%202022-06-04%20at%2015.58.24.png) "Coding Quiz")
 
 https://amuodmi.github.io/Coding-Quiz/
 
